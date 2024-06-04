@@ -82,42 +82,6 @@ To run the Streamlit app on ports 80 or 443, you need administrative privileges.
    ```sh
    sudo streamlit run main.py --server.port 80
    ```
-
-### Using a Reverse Proxy (Nginx)
-
-1. Install Nginx:
-   ```sh
-   sudo apt update
-   sudo apt install nginx
-   ```
-
-2. Configure Nginx to forward requests from port 80 to your Streamlit app:
-   ```nginx
-   server {
-       listen 80;
-       server_name your_domain.com;
-
-       location / {
-           proxy_pass http://localhost:8501;
-           proxy_http_version 1.1;
-           proxy_set_header Upgrade $http_upgrade;
-           proxy_set_header Connection "upgrade";
-           proxy_set_header Host $host;
-           proxy_cache_bypass $http_upgrade;
-       }
-   }
-   ```
-
-3. Restart Nginx:
-   ```sh
-   sudo systemctl restart nginx
-   ```
-
-4. Run your Streamlit app on a higher port:
-   ```sh
-   streamlit run main.py
-   ```
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
