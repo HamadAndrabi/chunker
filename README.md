@@ -1,4 +1,3 @@
-
 # Streamlit Chunker
 
 This project is a Streamlit application that allows users to upload PDF files, process them into text chunks, and perform similarity searches on the text. Users can adjust chunking parameters and view the most similar chunks retrieved.
@@ -91,3 +90,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Streamlit for the awesome web app framework
 - Langchain for the vector store and embedding support
 - PyPDF2 for PDF text extraction
+
+Link to the App: https://chunker.streamlit.app/
+
